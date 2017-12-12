@@ -23,6 +23,11 @@
         `php artisan db:seed`
     * 后台登录账号[admin] 密码[123456]
 
+5. 开启 DebugBar 扩展
+    * 在 [Composer 中文社区](https://packagist.org/packages/barryvdh/laravel-debugbar) 查看安装命令
+        如果是 Laravel 5.5 可以直接运行命令：`composer require barryvdh/laravel-debugbar`
+        如果是 Laravel 5.5 以下以下版本，参考安装教程
+
 ## 注
 
     此系统目前还处于开发阶段，很多功能还在完善中，如果有发现问题和不错想法的朋友，

@@ -17,8 +17,21 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+        $backend_home_url = config('site.route.prefix.admin', 'admin').'/index';
+        $desktop_home_url = config('site.route.prefix.desktop', '').'/i/welcome.html';
+        switch ($guard) {
+            case 'admin':
+                $site = 'web';
+                $home_url = $backend_home_url;
+                break;
+            case 'desktop':
+            default:
+                $site = 'member';
+                $home_url = $desktop_home_url;
+                break;
+        }
+        if (Auth::guard($site)->check()) {
+            return redirect($home_url);
         }
 
         return $next($request);
