@@ -8,11 +8,11 @@
     * 通过 GitHub：通过项目右侧的 [clone or download] 按钮 
     * 通过 Git   ：`git clone https://github.com/Albert3306/dog.git`
 
-2. 安装 [composer](https://getcomposer.org/download/)
+2. 安装 [Composer](https://getcomposer.org/download/)
     * 安装好 composer 后，在命令行运行：`composer` 看是否安装成功
     * 进入项目目录，在命令行运行：`composer install` 安装依赖
     * 项目入口文件在项目根路径下的 `public` 文件中
-    * 将外网 Composer 镜像改为国内 Composer 镜像 `composer config repo.packagist composer https://packagist.phpcomposer.com`，这样在拉取 Composer 中的扩展库时会快很多
+    * 将外网 Composer 镜像改为国内镜像，这样在管理依赖的外部工具库时效率会提升很多。命令： `composer config repo.packagist composer https://packagist.phpcomposer.com`
 
 3. 复制项目根路径下 .env.example 重命名为 .env 
     * 修改文件中的数据库配置和网站相关配置
