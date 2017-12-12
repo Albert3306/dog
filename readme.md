@@ -12,6 +12,7 @@
     * 安装好 composer 后，在命令行运行：`composer` 看是否安装成功
     * 进入项目目录，在命令行运行：`composer install` 安装依赖
     * 项目入口文件在项目根路径下的 `public` 文件中
+    * 将外网 Composer 镜像改为国内 Composer 镜像 `composer config repo.packagist composer https://packagist.phpcomposer.com`，这样在拉取 Composer 中的扩展库时会快很多
 
 3. 复制项目根路径下 .env.example 重命名为 .env 
     * 修改文件中的数据库配置和网站相关配置
@@ -29,6 +30,5 @@
         如果是 Laravel 5.5 以下以下版本，参考安装教程
 
 ## 注
-
     此系统目前还处于开发阶段，很多功能还在完善中，如果有发现问题和不错想法的朋友，
     可以通过邮件 [albert3306@aliyun.com] 或在 GitHub 中给我留言。小弟入坑两年有余，菜鸟一枚，殷勤希望各位大神带飞！
